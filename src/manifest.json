@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "jobcan accelerator",
+    "short_name": "jaccel",
+    "version": "1.0.0",
+    "author": "howdy39",
+    "description": "jobcanのWebUIをいい感じにパワーアップさせるやつ",
+    "icons": {
+      "128": "work_line72.png"
+    },
+    "content_security_policy": {
+      "script-src": "self"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://ssl.jobcan.jp/employee/attendance"
+        ],
+        "js": [
+          "content.js"
+        ]
+      }
+    ],
+    "host_permissions": [
+      "https://ssl.jobcan.jp/"
+    ]
+  }
